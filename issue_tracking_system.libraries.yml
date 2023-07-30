@@ -1,0 +1,4 @@
+issue_tracking:
+  css:
+    theme:
+      css/issue-tracking.css: {}

@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains issue tracking system .module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function issue_tracking_system_theme() {
+  return [
+    'issue_tracking_system' => [
+      'variables' => [
+        'values' => [],
+      ],
+    ],
+  ];
+}

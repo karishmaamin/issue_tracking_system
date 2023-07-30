@@ -1,0 +1,27 @@
+.block__issue_wrapper .issue_tracking_system .issue_tracking_container {
+    display: flex;
+    gap: 100px;
+    display: flex;
+    gap: 100px;
+    border: 1px solid grey;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.issue_tracking.left {
+    flex: 3;
+}
+
+.issue_tracking.right {
+    flex: 0.5;
+}
+
+.block__issue_wrapper label {
+    line-height: 0;
+    margin-bottom: 0;
+}
+
+.block-issue-tracking-system h2 {
+    width: 1170px;
+    margin: auto;
+}

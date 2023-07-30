@@ -1,0 +1,9 @@
+name: Issue Tracking System
+type: module
+description: 'Provides the block that list the latest 3 issues assigned to the current user'
+core_version_requirement: ^9 || ^10
+package: custom
+dependencies:
+  - drupal:block
+
+

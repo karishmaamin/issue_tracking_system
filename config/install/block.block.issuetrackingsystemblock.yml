@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - issue_tracking_system
+    - system
+    - user
+id: issuetrackingsystemblock
+theme:
+region: content
+weight: 0
+provider: null
+plugin: issue_tracking_system_block
+settings:
+  id: issue_tracking_system_block
+  label: 'Issue Tracking System Block'
+  label_display: visible
+  provider: issue_tracking_system
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

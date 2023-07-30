@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Theme override to display issue tracking system.
+ */
+#}
+
+{{ attach_library('issue_tracking_system/issue_tracking') }}
+<div class="container block__issue_wrapper">
+  <div class="issue_tracking_system">
+    {% if values %}
+        {% for item in values %}
+            <div class="issue_tracking_container">
+                <div class="issue_tracking left">
+                    <h3><a href={{ item["url"] }}>{{ item["title"] }}</a></h3>
+                    <div>
+                        <label>Description</label>
+                        <div>{{ item["description"]|raw }}</div>
+                    </div>
+                    <div>
+                        <label>Due Date</label>
+                        <div>{{ item["due_date"]|date("d-m-Y H:i") }}</div>
+                    </div>
+                </div>
+                <div class="issue_tracking right">
+                    <div>
+                        <label>Status: </label>
+                        <span>{{ item["status"] }}</span>
+                    </div>
+                    <div>
+                        <label>Assignee: </label>
+                        <span>{{ item["assignee"] }}</span>
+                    </div>
+                    <div>
+                        <label>Reporter: </label>
+                        <span>{{ item["reporter"] }}</span>
+                    </div>
+                    <div>
+                        <label>Priority: </label>
+                        <span>{{ item["priority"] }}</span>
+                    </div>
+                    <label>Watchers: </label>
+                    {% for value in item["list_of_watchers"] %}
+                        <div>{{ value }}</div>
+                    {% endfor %}
+                    <div>
+                        <label>Issue Type: </label>
+                        <span>{{ item["issue_type"] }}</span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+    <div>There is no Issue Assigned to you</div>
+    {% endif %}
+
+  </div>
+</div>
